@@ -184,6 +184,16 @@ Acima temos o codigo exemplo fornecido no site refactoring.guru, nele, temos uma
 
 # Observer:
 
+O Observer é um padrão de projeto comportamental que permite notificar múltiplos objetos sobre quaisquer eventos que aconteçam com um objeto observado.
+
+O problema surge quando um objeto precisa notificar outros sobre suas mudanças de estado, mas não quer depender diretamente desses objetos observadores. Isso evita que o objeto observado e os observadores fiquem fortemente acoplados.
+
+A solução oferecida pelo padrão Observer envolve o estabelecimento de um mecanismo de assinatura. O objeto observado mantém uma lista de observadores interessados em seus eventos. Quando ocorre um evento de interesse, o objeto observado notifica todos os observadores através de um método de notificação comum.
+
+Essa abordagem promove um desacoplamento entre o objeto observado e os observadores, garantindo que eles possam reagir de forma independente a eventos sem conhecer detalhes internos uns dos outros.
+
+Um exemplo comum é a assinatura de revistas e jornais, onde os assinantes recebem novas edições diretamente em suas caixas de correio após a publicação, sem a necessidade de verificar ativamente a disponibilidade da próxima edição.
+
 ## Exemplo:
 
 ```python:
@@ -322,6 +332,8 @@ if __name__ == "__main__":
 
     subject.some_business_logic()
 ```
+
+Acima temos o codigo exemplo fornecido no site refactoring.guru, nele, estamos lidando com o padrão Observer, o mesmo é usado para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando. Neste exemplo, temos duas interfaces principais: Subject e Observer. A Subject define métodos para gerenciar assinantes (observadores). Ela declara métodos para anexar um observador, desanexar um observador e notificar todos os observadores sobre um evento, e a classe ConcreteSubject implementa tal interface. Ela possui um estado importante e notifica os observadores quando o estado muda. Ela mantém uma lista de observadores e fornece métodos para anexar, desanexar e notificar observadores. Enquanto isso a interface Observer define o método update, que é usado pelos Subjects para notificar os observadores e as classes ConcreteObserverA e ConcreteObserverB implementam tal interface e reagem aos eventos emitidos pelo Subject ao qual foram anexadas. Tal padrão é muito util em aplicações dependentes de dados em tempo real, por exemplo se eu possuir uma lista de salas disponiveis para reserva, eu poderia ter diversos assinantes, que no caso seriam usuários que teriam sua lista local atualizada, assim que fosse observado uma alteração na lista de salas disponiveis na nuvem.
 
 ## UML Observer:
 ![UML Observer](UMLObserver.png)
