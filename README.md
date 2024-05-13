@@ -177,7 +177,7 @@ if __name__ == "__main__":
     client_code(decorator2)
 ```
 
-Acima temos o codigo exemplo fornecido no site refactoring.guru, nele, temos uma estrutura de classes que implementam o padrão Decorator. Cada componente pode ser decorado com funcionalidades adicionais sem que isso afete a interface comum definida pela classe Component. Isso permite uma grande flexibilidade na composição de funcionalidades em tempo de execução. O cliente pode trabalhar tanto com componentes simples quanto com componentes decorados, pois todos eles seguem a mesma interface definida por Component. Isto é util pois da ao mesmo uma grande flexibilidade para lidar com uma variedade de tipos de notificações, presentes em uma biblioteca de notificações, assim como citamos anteriormente.
+Acima temos o codigo exemplo fornecido no site refactoring.guru, nele, temos uma estrutura de classes que implementam o padrão Decorator. Cada componente pode ser decorado com funcionalidades adicionais sem que isso afete a interface comum definida pela classe Component. Isso permite uma grande flexibilidade na composição de funcionalidades em tempo de execução. O cliente pode trabalhar tanto com componentes simples quanto com componentes decorados, pois todos eles seguem a mesma interface definida por Component. Isto é util pois da ao mesmo uma grande flexibilidade, para por exemplo lidar com uma variedade de tipos de notificações, presentes em uma biblioteca de notificações, assim como citamos anteriormente.
 
 ## UML Decorator:
 ![UML Decorator](UMLDecorator.png)
