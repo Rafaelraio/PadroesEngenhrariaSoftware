@@ -1,3 +1,4 @@
+# Singleton:
 O padrão Singleton é um dos padrões de design mais simples e frequentemente usados. Ele garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso a essa instância.
 
 ```python:
@@ -42,6 +43,6 @@ if __name__ == "__main__":
     else:
         print("Singleton failed, variables contain different instances.")
 ```
-
+UML Singleton:
 ![UML Singleton](UMLSingleton.png)
 
