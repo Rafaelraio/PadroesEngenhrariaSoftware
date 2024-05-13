@@ -62,6 +62,16 @@ Acima temos o codigo exemplo fornecido no site refactoring.guru, que implementa 
 
 # Decorator:
 
+O padrão Decorator permite adicionar novos comportamentos aos objetos, envolvendo-os em invólucros que contêm esses comportamentos. Ele resolve o problema de estender o comportamento de objetos de forma dinâmica, sem a necessidade de criar subclasses para cada combinação possível de comportamentos.
+
+O padrão emprega a composição ao invés de herança, permitindo que os objetos sejam envolvidos em invólucros que adicionam novos comportamentos. Cada invólucro (decorator) implementa a mesma interface que o objeto alvo, de modo que o cliente pode interagir com ele da mesma forma que interage com o objeto original.
+
+No exemplo de uma biblioteca de notificações, diferentes tipos de notificação (email, SMS, Facebook, Slack) são implementados como decorators que envolvem o objeto base de notificação. O cliente pode criar pilhas complexas de decorators para configurar as preferências de notificação.
+
+Uma analogia comum para entender o padrão Decorator é vestir-se com roupas. Adicionamos camadas de roupas adicionais (decorators) para estender nosso comportamento básico (objeto original), como vestir um casaco para nos aquecer ou uma capa de chuva para nos proteger da chuva.
+
+O padrão Decorator proporciona flexibilidade e extensibilidade ao permitir a adição dinâmica de comportamentos aos objetos, sem a necessidade de modificar sua estrutura original.
+
 ## Exemplo:
 
 ```python:
@@ -166,6 +176,8 @@ if __name__ == "__main__":
     print("Client: Now I've got a decorated component:")
     client_code(decorator2)
 ```
+
+Acima temos o codigo exemplo fornecido no site refactoring.guru, nele, temos uma estrutura de classes que implementam o padrão Decorator. Cada componente pode ser decorado com funcionalidades adicionais sem que isso afete a interface comum definida pela classe Component. Isso permite uma grande flexibilidade na composição de funcionalidades em tempo de execução. O cliente pode trabalhar tanto com componentes simples quanto com componentes decorados, pois todos eles seguem a mesma interface definida por Component. Isto é util pois da ao mesmo uma grande flexibilidade para lidar com uma variedade de tipos de notificações, presentes em uma biblioteca de notificações, assim como citamos anteriormente.
 
 ## UML Decorator:
 ![UML Decorator](UMLDecorator.png)
