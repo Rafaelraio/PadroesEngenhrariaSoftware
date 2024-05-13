@@ -1,5 +1,15 @@
 # Singleton:
-O padrão Singleton é um dos padrões de design mais simples e frequentemente usados. Ele garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso a essa instância.
+O padrão Singleton é um padrão de projeto criacional que garante que uma classe tenha apenas uma instância, fornecendo um ponto de acesso global para essa instância. Ele resolve dois problemas principais:
+
+Primeiro ele garante que uma classe tenha apenas uma única instância, útil para controlar o acesso a recursos compartilhados, como uma base de dados ou arquivo.
+
+Segundo ele fornece um ponto de acesso global para essa instância, evitando que o código sobrescreva a instância e mantendo-a acessível de qualquer lugar do programa.
+
+A implementação do Singleton geralmente envolve tornar o construtor da classe privado e fornecer um método estático de criação que retorna a única instância da classe, criando-a se ainda não existir e armazenando-a em um campo estático.
+
+Uma analogia com o mundo real seria o governo de um país, que é uma única entidade globalmente acessível e tem apenas uma instância, independentemente das pessoas que o compõem.
+
+O uso do Singleton é muito útil para para controlar o acesso a algum recurso compartilhado—por exemplo, uma base de dados ou um arquivo.
 
 ## Exemplo:
 ```python:
@@ -44,6 +54,9 @@ if __name__ == "__main__":
     else:
         print("Singleton failed, variables contain different instances.")
 ```
+
+Acima temos o codigo exemplo fornecido no site refactoring.guru, que implementa um singleton, codigo este que poderiamos facilmente modificar na função "some_business_logic()", para por exemplo se comunicar com um arquivo de texto,pois usando deste padrão podemos garantir que ira existir apenas uma instancia dessa classe, assim evitando conflitos de escrita e leitura. 
+
 ## UML Singleton:
 ![UML Singleton](UMLSingleton.png)
 
